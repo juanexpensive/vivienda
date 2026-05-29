@@ -1,6 +1,6 @@
-# Spain Insights
+# S-Pain
 
-Spain Insights is a small data app focused on exploring housing price trends across Spanish provinces over time using public data.
+S-Pain is a small data app focused on exploring housing price trends across Spanish provinces over time using public data.
 
 ## Tech Stack
 

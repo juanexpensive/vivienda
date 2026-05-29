@@ -1,8 +1,8 @@
-# PRD: Vivienda
+# PRD: S-Pain
 
 ## Introduction
 
-`Vivienda` is a small data product focused on showing how housing prices have evolved over time across Spanish provinces using public INE data. The goal is to build a visually strong, easy-to-understand portfolio project that lets a user explore historical trends, identify which provinces have risen the most, and understand territorial differences through charts, rankings, and a map.
+`S-Pain` is a small data product focused on showing how housing prices have evolved over time across Spanish provinces using public INE data. The goal is to build a visually strong, easy-to-understand portfolio project that lets a user explore historical trends, identify which provinces have risen the most, and understand territorial differences through charts, rankings, and a map.
 
 This first version is designed to be realistic for a short delivery window while still feeling like a polished product instead of a class exercise.
 
@@ -174,4 +174,4 @@ This first version is designed to be realistic for a short delivery window while
 - Should the default map metric be latest value, accumulated variation, or percentage variation?
 - Should the ranking show absolute change, percentage change, or allow switching between both?
 - Is province-level coverage complete enough in the selected dataset, or will the first version need fallback support for autonomous communities?
-- Should the app name remain `Vivienda`, or should it be renamed later for stronger portfolio branding?
+- The app name is now `S-Pain`; future naming work should focus on branding polish rather than a full rename.
