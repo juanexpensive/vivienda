@@ -1,4 +1,4 @@
-# Vivienda
+# Spain Insights
 
 Vivienda is a small data app focused on exploring housing price trends across Spanish provinces over time using public data.
 
