@@ -20,9 +20,10 @@ def render_select_periods(periods):
     return first_period, last_period
 
 
-def render_kpis(latest_value, variation, percentage_variation, highest_variation) -> None:
-    col1, col2, col3, col4 = st.columns(4)
+def render_kpis(latest_value, variation, percentage_variation, highest_variation, lowest_variation) -> None:
+    col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric("Latest value", latest_value)
     col2.metric("Variation", variation)
     col3.metric("% of variation", f"{percentage_variation:.2f}%")
-    col4.metric("province with highest variation",f"{highest_variation.name}")
+    col4.metric("Province with highest variation",f"{highest_variation.name}")
+    col5.metric("Province with lowest variation", f"{lowest_variation.name}")

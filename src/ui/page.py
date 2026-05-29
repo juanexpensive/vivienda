@@ -5,6 +5,7 @@ from src.domain.analytics import (
     calculate_kpis,
     filter_period_range,
     get_province_data,
+    calculate_highest_and_lowest_variation,
     normalize_period_range,
     prepare_periods,
     calculate_ranking
@@ -34,11 +35,9 @@ def render_body(housing_data: pd.DataFrame) -> None:
         first_period,
         last_period,
     )
-    ranking_data, highest_variation= calculate_ranking(housing_data, first_period, last_period)
     
     chart_data = selected_range_data[["period", "value"]]
-
+    highest_variation, lowest_variation = calculate_highest_and_lowest_variation(calculate_ranking(housing_data, first_period, last_period))
     latest_value, variation, percentage_variation = calculate_kpis(selected_range_data)
-    render_kpis(latest_value, variation, percentage_variation, highest_variation)
+    render_kpis(latest_value, variation, percentage_variation, highest_variation, lowest_variation)
     render_chart(chart_data, selected_province, first_period, last_period)
-    st.dataframe(ranking_data)

@@ -53,5 +53,9 @@ def calculate_ranking(housing_data, first_period, last_period):
     grouped_data = pd.DataFrame({
         "first_value" : first , "last_value" : last, "variation" : last - first
     }).sort_values("variation",ascending=False)
-    highest_variation = grouped_data.iloc[0]
-    return grouped_data, highest_variation
+    return grouped_data
+
+def calculate_highest_and_lowest_variation(ranking_data):
+    highest_variation = ranking_data.iloc[0]
+    lowest_variation = ranking_data.iloc[-1]
+    return highest_variation, lowest_variation
