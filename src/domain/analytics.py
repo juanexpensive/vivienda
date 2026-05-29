@@ -1,3 +1,4 @@
+from encodings.punycode import T
 import pandas as pd
 
 
@@ -42,3 +43,15 @@ def calculate_kpis(selected_range_data: pd.DataFrame):
         percentage_variation = 0
 
     return latest_value, variation, percentage_variation
+
+def calculate_ranking(housing_data, first_period, last_period):
+    filtered_housing_data : pd.DataFrame = housing_data[(housing_data["period"] >= first_period) & (housing_data["period"] <= last_period)]
+    sorted_housing_data = filtered_housing_data.sort_values(["province", "period"])
+    grouped_data = sorted_housing_data.groupby(["province"])
+    first = grouped_data.first()["value"]
+    last = grouped_data.last()["value"]
+    grouped_data = pd.DataFrame({
+        "first_value" : first , "last_value" : last, "variation" : last - first
+    }).sort_values("variation",ascending=False)
+    highest_variation = grouped_data.iloc[0]
+    return grouped_data, highest_variation

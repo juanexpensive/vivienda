@@ -1,6 +1,6 @@
-# S-Pain
+# SPain
 
-S-Pain is a small data app focused on exploring housing price trends across Spanish provinces over time using public data.
+SPain is a small data app focused on exploring housing price trends across Spanish provinces over time using public data.
 
 ## Tech Stack
 

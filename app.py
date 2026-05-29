@@ -5,6 +5,6 @@ from src.ui.page import render_body
 
 housing_data = load_housing_data()
 
-st.set_page_config(page_title="S-Pain", layout="wide")
+st.set_page_config(page_title="SPain", layout="wide")
 render_header()
 render_body(housing_data)
